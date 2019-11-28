@@ -53,7 +53,7 @@ const STORE = {
 
         },
         {
-            text: 'Which game you know like shooting game ',
+            text: 'Which game you know like shooting game? ',
             answers: [
                 'CS:go',
                 'Dota 2',
@@ -61,9 +61,40 @@ const STORE = {
                 'Need for speed',
             ],
             correctAnswerIndex: 0
+        },
+
+        {
+            text: 'What game is the most popular in 2019?',
+            answers: [
+                'The Elder Scrolls V: Skyrim',
+                'Spider-Man (2018)',
+                'PlayerUnknown’s Battlegrounds',
+                'Minecraft',
+            ],
+            correctAnswerIndex: 3
+        },
+        {
+            text: 'What is the best CS:GO player in 2019? ',
+            answers: [
+                's1mple',
+                'ZywOo',
+                'TenZ',
+                'Dandy',
+            ],
+            correctAnswerIndex: 0
+},
+        {
+            text: 'which player is the team leader of the NaVi? ',
+            answers: [
+                'Louise',
+                'Dandy',
+                'ZywOo',
+                'Leonard',
+            ],
+            correctAnswerIndex: 1
         }
     ]
-}
+    };
 
 function evaluateAnswer(ev) {
 
@@ -115,7 +146,7 @@ function gotoNextQuestion() {
 
 function displayStatus() {
 
-    STATUS_CONTAINER.text(`Q ${STORE.currentQuestionIndex + 1} of ${STORE.questionsArr.length}, ${STORE.score} correct, ${STORE.incorrect} incorrect`)
+    STATUS_CONTAINER.text(`Question number: ${STORE.currentQuestionIndex + 1}/${STORE.questionsArr.length}, ${STORE.score} correct, ${STORE.incorrect} incorrect`)
 }
 
 function displayFeedback(isCorrect, correctAnswerString) {
